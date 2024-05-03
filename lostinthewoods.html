@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lost In The Woods</title>
+        <meta charset="UTF8"/>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <h1>Lost In The Woods</h1>
+        <div class="horizontaldiv">
+            <a class="navigation" href="index.html">Index</a>
+            <a class="navigation" href="about.html">About Me</a>
+            <a class="navigation" href="games.html">My Games</a>
+        </div>
+        <p>
+            <b><i>Lost In The Woods</i></b> is a 2D shooter survival game where the player is stranded
+            in the woods in the middle of a zombie apocalypse and has to find his way to safety.
+        </p>
+        <h3>Plot</h3>
+        <p>
+            The plot of the story is about a meteorological station worker fulfilling his duties as a part of
+            an ordinary day when he gets a report about a contagious dicease spreading rapidly and turning its
+            victims into ravenous, homicidal zombies.
+        </p>
+        <p>
+            After hearing the horrifying news, he is stuck there wondering what he should do next. He tries calling
+            his coworkers for help, but gets no response. The radio mentions something about a safe house setup in the city.
+            With nowhere else to go, he decides that his only hope for survival is to make his way there.
+        </p>
+        <p>
+            He makes his way through a series of obstacles, from the woods, all the way to the city, in order to escape to safety.
+            Along the way, he encounters large hordes of zombies that stand in his way. Armed with a gun, he kills every
+            undead that stands between him and his sanctuary.
+        </p>
+        <h3>Gameplay</h3>
+        <p>
+            The game is played using both mouse and keyboard. The WASD keys on the keyboard can move the player around the map,
+            and the mouse is used to aim, with left-clicking firing projectiles. The game features 3 levels of varying difficulty,
+            with every next level having more zombies and a more difficult to navigate map.
+        </p>
+        <p>
+            Each level has a number of zombies that the player has to get past. Each zombie has a certain amount of health
+            as well as its own game state that determines its behaviour. By default, a zombie is in the idle state, which
+            causes it to stay still in one spot. When the player gets too close, it enters the chase state, which makes it
+            follow the player in a straight line until it gets close enough to attack. When it gets close enough, it enters
+            the attack state, making it attack the player at a certain interval, causing him to lose 5 health every time.
+            When the player's health drops to 0, the level ends and the game over screen is opened, which prompts the player
+            to go back to the main menu or retry the current level. The player can also shoot projectiles at the zombies,
+            with each projectile hitting causing them to lose 1hp. When a zombie's health drops to 0, it dies, playing a
+            death sound (if sound is not muted) and making it disappear from the map.
+        </p>
+        <p>
+            The goal of each level is to get to the circle with a dot in the middle indicating the level end. This causes the
+            game to progress to the next level, and to the game won screen if the level is the final one.
+        </p>
+        <h3>Technical Design</h3>
+        <p>
+            Lost In The Woods is created using a custom game engine that uses APIs such as Vulkan for rendering graphics,
+            SDL2 for windowing and event handling, SDL2_mixer for playing audio, glm for mathematics, stbi_image for loading
+            images and FreeType for loading glyphs and rendering text.
+        </p>
+        <p>
+            The engine supports many elements that are often used in video games, such as rendering, audio, event handling,
+            graphical user interfaces (GUIs), collision testing and artifical intelligence. It is tailored specifically
+            for the game being developed, using only the systems that are necessary for the game, and with a structure that
+            best suits its needs. All of the game's source code is written in C++.
+        </p>
+    </body>
+</html>
